@@ -1,0 +1,26 @@
+
+# BEHAVIOUR CLONING
+nohup python -u behaviour_cloning.py --mf  ../../Data/vm.csv --cf ../../Data/container.csv > ../logs/BC/bc_real_duration_ckpt_vp_i_mapping_grp_16_alibaba_1k_train_live_vm_3k_ms_1k_new.log &
+
+
+# Generate Mappings
+
+nohup python -u generate_mappings_traj.py --mf ../../Data/vm.csv --cf ../../Data/container.csv --nm vbp_mappings --b 16 > ../mapping_logs/vbp_mappings.log &
+
+
+# CHANGES
+/data_ten/vectorized_bin_packing/venv/lib/python3.8/site-packages/torch/distributions/utils.py
+def logits_to_probs(logits, is_binary=False):
+    chnaged: return F.softmax(logits, dim=-1, dtype=torch.double)
+
+/data_ten/vectorized_bin_packing/venv/lib/python3.8/site-packages/imitation/algorithms/adversarial/airl.py
+from sb3_contrib.common.maskable import policies as sb3_policies
+STOCHASTIC_POLICIES = (sac_policies.SACPolicy, policies.ActorCriticPolicy, sb3_policies.MaskableActorCriticPolicy)
+
+/data_ten/vectorized_bin_packing/venv/lib/python3.8/site-packages/imitation/algorithms/adversarial/common.py
+from sb3_contrib.common.maskable import policies as sb3_policies
+if isinstance(self.policy, policies.ActorCriticPolicy) or isinstance(self.policy, sb3_policies.MaskableActorCriticPolicy ):
+
+########
+nohup python -u train_sb3_alibaba_real_cost.py --mf ../../Data/vm.csv --cf ../../Data/container.csv --train 1 --gen_expert_traj 1 &
+
