@@ -1,5 +1,9 @@
 # CARL-SCHEDULER
 
+## Citation
+P. S. Vinayak, S. S. Mallick, L. Jagarlamudi, A. Chakraborty and Y. Simmhan, **CARL: Cost-Optimized Online Container Placement on VMs Using Adversarial Reinforcement Learning** in *IEEE Transactions on Cloud Computing*, vol. 13, no. 1, pp. 321-335, Jan.-March 2025, doi: [10.1109/TCC.2025.3528446].
+
+
 ## Installation
 
 ```bash
