@@ -1,11 +1,14 @@
 # CARL SCHEDULER
 
-## Citation
+## Credits
+
+* **Developers:** The CARL Scheduler code was developed by Prathamesh (<prathameshs@alum.iisc.ac.in>) and Saswat from the Cloud Systems Lab (CSL) at IISc.
+
+* Please cite this work using the following publication if you use it:
+
 Prathamesh Saraf Vinayak; Saswat Subhajyoti Mallick; Lakshmi Jagarlamudi; Anirban Chakraborty; Yogesh Simmhan; **CARL: Cost-Optimized Online Container Placement on VMs Using Adversarial Reinforcement Learning** in *IEEE Transactions on Cloud Computing*, vol. 13, no. 1, pp. 321-335, Jan.-March 2025, doi: [10.1109/TCC.2025.3528446](https://doi.org/10.1109/TCC.2025.3528446).
 
-The CARL Scheduler code was developed by Prathamesh (<prathameshs@alum.iisc.ac.in>) and Saswat from the Cloud Systems Lab (CSL) at IISc.
-
-*Code is a research prototype and provided as-is.*
+* *Code provided in this repository is a research prototype and provided as-is.*
 
 ## Installation
 
